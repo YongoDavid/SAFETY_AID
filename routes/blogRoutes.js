@@ -1,6 +1,6 @@
-const express = require('express')
-const router = express.Router()
-const blogController  = require('../controller/blogsController')
+const express = require('express');
+const blogController  = require('../controller/blogsController');
+const router = express.Router();
 
 
 // app.get('/add-blog' ,(req,res)=>{
@@ -17,9 +17,9 @@ const blogController  = require('../controller/blogsController')
 //             console.log(err)
 //         })
 // })
+router.get('/add-blog' , blogController.New_blog_get);
+router.post('/add-blog-create' , blogController.New_blog_post );
+router.get('/single-blog', blogController.Find_singleBlog);
+router.get('/blogs', blogController.All_Blogs );
 
-router.post('/add-blog' , blogController.New_blog )
-router.get('/all-blogs', blogController.Find_allBlogs)
-router.get('/single-blog', blogController.Find_singleBlog)
-router.get('/blogs', blogController.All_Blogs )
 module.exports = router
