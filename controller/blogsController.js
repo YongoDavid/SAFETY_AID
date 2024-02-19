@@ -28,8 +28,7 @@ const New_blog_get = (req,res)=>{
 // figure out why data isnt sending 
 const New_blog_post = (req,res)=>{
     const blog = new Blog(req.body);
-
-    console.log(blog)
+    // console.log(blog)
     blog.save()
         .then((result)=>{
             res.redirect('/blogs');
@@ -44,4 +43,4 @@ module.exports = {
     New_blog_post,
     Find_singleBlog,
     All_Blogs
-}
+};

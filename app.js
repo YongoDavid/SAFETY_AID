@@ -6,8 +6,8 @@ const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
 
 // come back to check the @SAFETY-AID  connection to database
-const dbURL = 'mongodb+srv://SAFETY-AID:SAFETY-AID@cluster0.zs6k5gt.mongodb.net/'
-mongoose.connect(dbURL)
+const dbURI = 'mongodb+srv://nodeninja:nodeninja12345@cluster0.zs6k5gt.mongodb.net/'
+mongoose.connect(dbURI)
     .then(result => {
         app.listen(3000)
     })
