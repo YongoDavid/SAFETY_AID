@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=name">
+    <title>New post | </title>
+</head>
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+   <h1>Tell us your exprience</h1>
+
+    <form action="/blogs" method="post">
+        <label for="title">Blog title:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="snippet">Blog snippet:</label>
+        <input type="text" id="snippet" name="snippet" required>
+        <label for="body">Blog body:</label>
+        <textarea name="body" id="body"></textarea required>
+        <button>Submit</button>
+    </form>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
