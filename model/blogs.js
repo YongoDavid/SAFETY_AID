@@ -4,15 +4,15 @@ const Schema = mongoose.Schema;
 const blogSchema = new Schema({
     title: {
         type: String ,
-        // required: true
+        required: true 
     },
     snippet: {
-        tyype: String,
-        // required: true
+        type: String,
+        required: true
     },
     body: {
         type: String,
-        // required: true
+        required: true
     },
 } , {timestamps: true});
 

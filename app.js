@@ -29,10 +29,26 @@ app.get('/blogs', (req,res)=>{
     .catch((err)=>{
         console.log(err)
     })
-})
+});
+app.get('/create' , (req,res)=>{
+    res.render('create')
+});
+app.post('/blogs' , (req,res)=>{
+    const newschema = Blog(req.body)
+
+    newschema.save()
+        .then((result)=>{
+            res.redirect('/blogs')
+        })
+        .catch((err)=>{
+            console.log(err)
+        });
+});
 app.get('/about', (req,res)=>{
     res.sendFile('about.html' , {root: __dirname})
 });
 app.use((req,res)=>{
     res.status(404).sendFile('404.html' , {root: __dirname})
 })
+
+// NEXT THING TO DO IT TO GET A SINGLE BLOG BY ID USING ROUTE PARAMETER
