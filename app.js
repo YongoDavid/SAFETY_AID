@@ -50,7 +50,9 @@ app.get('/about', (req,res)=>{
 app.use((req,res)=>{
     res.status(404).sendFile('404.html' , {root: __dirname})
 })
-
+app.use((req,res)=>{
+    console.log('Server ended')
+})
 
 // NEXT THING TO DO IT TO GET A SINGLE BLOG BY ID USING ROUTE PARAMETER
 // ANOTHER SHOW THEM IN DETIALS PAGE 
