@@ -51,4 +51,6 @@ app.use((req,res)=>{
     res.status(404).sendFile('404.html' , {root: __dirname})
 })
 
+
 // NEXT THING TO DO IT TO GET A SINGLE BLOG BY ID USING ROUTE PARAMETER
+// ANOTHER SHOW THEM IN DETIALS PAGE 
